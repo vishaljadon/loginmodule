@@ -1,0 +1,23 @@
+import { Schema, model } from "mongoose";
+const riskCommentSchema = new Schema({
+    content: {
+        type: String,
+        required: true,
+    },
+    images: {
+        type: [Schema.Types.ObjectId],
+        ref: "images"
+    },
+    created_by: {
+        type: Schema.Types.ObjectId,
+        ref: "users",
+        required: true
+    },
+    created_at: {
+        type: Date,
+        default: Date.now,
+    }
+});
+const riskCommentModel = model("riskComments", riskCommentSchema);
+// riskCommentModel.schema.post()
+export { riskCommentModel };
