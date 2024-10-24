@@ -8,7 +8,8 @@ const axiosInstance = axios.create({
     'Content-Type': 'application/json',
   },
   credentials: 'include',
-  timeout:'1200000'
 });
 
 export default axiosInstance
+
+// loginmodule-git-main-vishaljadons-projects.vercel.app
